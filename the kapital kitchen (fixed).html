@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Kapital Kitchen | Premium Dining Experience</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+   
+    <script>
+        // Customizing Tailwind to use a luxury color palette
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'kapital-dark': '#0c0c0c', // Very deep black/charcoal
+                        'kapital-gold': '#D4AF37', // Classic gold accent
+                        'kapital-subtle': '#1a1a1a', // Subtle secondary background
+                        'kapital-accent': '#333333', // Darker accent for borders/separators
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'], // Elegant display font
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+    /* your existing CSS above here ... */
+
+    /* 🔥 Navigation Font Styling */
+    .premium-link {
+        font-family: 'Playfair Display', serif;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 1.2px;
+        color: #e5e5e5;
+        transition: 0.3s ease;
+    }
+    .premium-link:hover {
+        color: #D4AF37; /* Gold hover */
+        letter-spacing: 2px;
+    }
+
+</style>
+
+    <style>
+        /* Custom styles for button luxury effect and slider transition */
+        .btn-luxury {
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .btn-luxury:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px rgba(212, 175, 55, 0.4); /* Gold shadow on hover */
+            background-color: #e6c460; /* Slightly lighter gold */
+        }
+        .slide-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0.5; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Style for the slider container */
+        .slider-container {
+            height: 100vh; /* Full viewport height for premium feel */
+            min-height: 600px;
+        }
+    </style>
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+
+<body class="bg-kapital-dark text-white font-sans overflow-x-hidden">
+
+    <!-- Navigation Bar -->
+   <header class="sticky top-0 z-50 bg-kapital-dark/95 shadow-lg border-b border-kapital-subtle">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 
+              flex flex-wrap items-center justify-between md:justify-between gap-y-3">
+
+    <!-- LOGO + TEXT (CENTER ON MOBILE) -->
+    <div class="flex items-center space-x-2 w-full md:w-auto justify-center md:justify-start">
+      <img src="https://i.ibb.co/Kc7tJvT6/1000077925-removebg-preview.png"
+           class="h-10 w-auto">
+
+      <a class="font-serif text-[18px] text-white md:text-xl tracking-wide"
+         style="color:#d9d9d9;">
+         The Kapital Kitchen
+      </a>
+    </div>
+
+    <!-- MENU NAV (ALREADY CENTERED BELOW) -->
+    <div class="flex w-full justify-center md:w-auto md:justify-end
+                space-x-4 md:space-x-10 text-sm md:text-[18px] font-light tracking-wide">
+
+      <a href="#home" class="premium-link">Home</a>
+      <a href="#menu" class="premium-link">Menu</a>
+      <a href="#about" class="premium-link">About</a>
+      <a href="#contact" class="premium-link">Reservations</a>
+    </div>
+
+  </nav>
+</header>
+
+<!-- 1. Hero Section with Video Background -->
+<section id="home" class="relative h-screen min-h-[600px] overflow-hidden">
+  <!-- Background Video -->
+  <video
+    autoplay
+    muted
+    loop
+    playsinline
+    class="absolute inset-0 w-full h-full object-cover"
+  >
+    <source src="https://files.catbox.moe/yhoo49.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Dark overlay + text -->
+  <div class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center p-4">
+  <h2 style="font-family:'Cinzel', serif; font-weight:600; font-size:4.2rem; letter-spacing:0.06em; color:#D4AF37;"
+    class="md:text-[5.2rem] mb-4">
+    The Kapital Kitchen
+</h2>
+
+
+
+
+
+
+
+
+    <p class="text-xl md:text-3xl font-light max-w-3xl">
+      An experience of unparalleled elegance and refined culinary artistry in the heart of the city.
+    </p>
+    <a
+      href="#contact"
+      class="mt-10 px-8 py-3 bg-kapital-gold text-kapital-dark font-semibold rounded-full shadow-xl"
+    >
+      Book a Table
+    </a>
+  </div>
+</section>
+
+
+    <!-- 2. Menu Section -->
+<section id="menu" class="py-24 bg-kapital-subtle border-t border-b border-kapital-accent">
+
+  <!-- CENTERED CONTENT CONTAINER FOR TITLE + CARDS -->
+  <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-center font-serif text-5xl text-kapital-gold mb-12 border-b-2 border-kapital-gold inline-block pb-2">
+          The Culinary Journey
+      </h2>
+      <p class="text-center text-xl mb-16 text-gray-300">
+          A selection of our chef's most celebrated creations, crafted with the finest ingredients.
+      </p>
+
+      <!-- MENU GRID -->
+      <div class="grid md:grid-cols-2 gap-x-10 gap-y-12">
+
+          <!-- Paneer Tikka Perfection -->
+          <div class="flex items-center justify-between border-b border-kapital-accent pb-4">
+            <div class="flex items-center space-x-4">
+              <img src="https://i.ibb.co/Q7w9qXmy/Tikka-Perfection.jpg" alt="Paneer Tikka Perfection"
+                   class="w-20 h-20 object-cover rounded-lg shadow-md border border-kapital-gold/50">
+              <div>
+                <h3 class="font-serif text-2xl text-white">Paneer Tikka Perfection</h3>
+                <p class="text-gray-400 text-[15px] leading-snug">
+                  Char-grilled paneer with smoky tandoori spices, onions & capsicum.
+                </p>
+              </div>
+            </div>
+            <span class="text-xl font-semibold text-kapital-gold">₹329</span>
+          </div>
+
+          <!-- Spicy Chicken Starters -->
+          <div class="flex items-center justify-between border-b border-kapital-accent pb-4">
+            <div class="flex items-center space-x-4">
+              <img src="https://i.ibb.co/xqX3GpXh/Warning-these-chicken-starters-are-addictive-One-bite-and-you-ll-be-hooked-Order-now-taste-the-fire.jpg"
+                   alt="Spicy Chicken Starters"
+                   class="w-20 h-20 object-cover rounded-lg shadow-md border border-kapital-gold/50">
+              <div>
+                <h3 class="font-serif text-2xl text-white">Spicy Chicken Starters</h3>
+                <p class="text-gray-400 text-[15px] leading-snug">
+                  Crispy chicken tossed in fiery chilli seasoning with smoky flavour.
+                </p>
+              </div>
+            </div>
+            <span class="text-xl font-semibold text-kapital-gold">₹249</span>
+          </div>
+
+          <!-- Tandoori Chicken -->
+          <div class="flex items-center justify-between border-b border-kapital-accent pb-4">
+            <div class="flex items-center space-x-4">
+              <img src="https://i.ibb.co/Gf4mrKnp/Where-every-bite-of-Chicken-Tikka-melts-into-smoky-perfection-Dine-in-today-or-tap-the-link-to-order.jpg"
+                   alt="Tandoori Chicken"
+                   class="w-20 h-20 object-cover rounded-lg shadow-md border border-kapital-gold/50">
+              <div>
+                <h3 class="font-serif text-2xl text-white">Tandoori Chicken</h3>
+                <p class="text-gray-400 text-[15px] leading-snug">
+                  Classic hot & smoky tandoori chicken grilled with bold spices and lemon.
+                </p>
+              </div>
+            </div>
+            <span class="text-xl font-semibold text-kapital-gold">₹299</span>
+          </div>
+
+          <!-- Butter Garlic Prawns -->
+          <div class="flex items-center justify-between border-b border-kapital-accent pb-4">
+            <div class="flex items-center space-x-4">
+              <img src="https://i.ibb.co/XkZ75RWj/Butter-garlic-and-prawns-what-s-not-to-love-A-sizzling-combination-of-flavors-that-ll-have-you-comin.jpg"
+                   alt="Butter Garlic Prawns"
+                   class="w-20 h-20 object-cover rounded-lg shadow-md border border-kapital-gold/50">
+              <div>
+                <h3 class="font-serif text-2xl text-white">Butter Garlic Prawns</h3>
+                <p class="text-gray-400 text-[15px] leading-snug">
+                  Juicy prawns tossed in butter, garlic & herbs with rich coastal flavour.
+                </p>
+              </div>
+            </div>
+            <span class="text-xl font-semibold text-kapital-gold">₹399</span>
+          </div>
+
+          <!-- Authentic Indian Curry -->
+          <div class="flex items-center justify-between border-b border-kapital-accent pb-4">
+            <div class="flex items-center space-x-4">
+              <img src="https://i.ibb.co/1fMgshh9/Enjoy-a-delicious-Indian-food-spread-this-Sunday-at-The-Kapital-Kitchen-Come-for-the-flavors-stay-fo.jpg"
+                   alt="Authentic Indian Curry"
+                   class="w-20 h-20 object-cover rounded-lg shadow-md border border-kapital-gold/50">
+              <div>
+                <h3 class="font-serif text-2xl text-white">Authentic Indian Curry</h3>
+                <p class="text-gray-400 text-[15px] leading-snug">
+                  Rich creamy curry simmered in spices, served with hot garlic naan.
+                </p>
+              </div>
+            </div>
+            <span class="text-xl font-semibold text-kapital-gold">₹349</span>
+          </div>
+
+          <!-- Signature Biryani -->
+          <div class="flex items-center justify-between border-b border-kapital-accent pb-4">
+            <div class="flex items-center space-x-4">
+              <img src="https://i.ibb.co/b5Pb9WtK/Layers-of-flavor-love-and-a-dash-of-magic-Our-Biryani-is-not-just-food-it-s-an-experience-that-warms.jpg"
+                   alt="Signature Biryani"
+                   class="w-20 h-20 object-cover rounded-lg shadow-md border border-kapital-gold/50">
+              <div>
+                <h3 class="font-serif text-2xl text-white">Signature Biryani</h3>
+                <p class="text-gray-400 text-[15px] leading-snug">
+                  Slow-cooked rice layered with spices, tender meat & rich aromas.
+                </p>
+              </div>
+            </div>
+            <span class="text-xl font-semibold text-kapital-gold">₹349</span>
+          </div>
+
+          <!-- Chicken Biryani -->
+          <div class="flex items-center justify-between border-b border-kapital-accent pb-4">
+            <div class="flex items-center space-x-4">
+              <img src="https://i.ibb.co/20q1HDTr/On-this-blessed-occasion-of-Milad-un-Nabi-may-peace-compassion-and-love-guide-our-hearts-Milad-Un-Na.jpg"
+                   alt="Chicken Biryani"
+                   class="w-20 h-20 object-cover rounded-lg shadow-md border border-kapital-gold/50">
+              <div>
+                <h3 class="font-serif text-2xl text-white">Chicken Biryani</h3>
+                <p class="text-gray-400 text-[15px] leading-snug">
+                  Fragrant long-grain rice layered with tender chicken & rich masala.
+                </p>
+              </div>
+            </div>
+            <span class="text-xl font-semibold text-kapital-gold">₹299</span>
+          </div>
+
+          <!-- Hakka Noodles -->
+          <div class="flex items-center justify-between border-b border-kapital-accent pb-4">
+            <div class="flex items-center space-x-4">
+              <img src="https://i.ibb.co/fdBRWZR5/Twirl-it-taste-it-love-it-Our-sizzling-Hakka-Noodles-are-packed-with-bold-flavors-and-the-perfect-wo.jpg"
+                   alt="Hakka Noodles"
+                   class="w-20 h-20 object-cover rounded-lg shadow-md border border-kapital-gold/50">
+              <div>
+                <h3 class="font-serif text-2xl text-white">Hakka Noodles</h3>
+                <p class="text-gray-400 text-[15px] leading-snug">
+                  Wok-tossed noodles with veggies, Indo-Chinese flavour & perfect spice.
+                </p>
+              </div>
+            </div>
+            <span class="text-xl font-semibold text-kapital-gold">₹229</span>
+          </div>
+
+      </div> <!-- end grid -->
+  </div> <!-- end container -->
+
+  <!-- FULL-WIDTH CENTERED BUTTON -->
+  <div class="mt-16 flex justify-center w-full">
+      <a href="#"
+         class="px-8 py-3 bg-kapital-gold text-kapital-dark font-semibold rounded-full btn-luxury shadow-xl">
+          View Full Digital Menu
+      </a>
+  </div>
+
+</section>
+
+
+    <!-- 3. About Section -->
+    <section id="about" class="py-24 bg-kapital-dark">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-center font-serif text-5xl text-kapital-gold mb-16">Our Philosophy</h2>
+           
+            <!-- Interior Images Grid -->
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <img src="https://i.ibb.co/tT5Ckfyh/IMG-20251122-204211.jpg" alt="Restaurant Interior View 1" class="w-full h-auto object-cover rounded-lg shadow-2xl transition duration-500 hover:opacity-90">
+                <img src="https://i.ibb.co/HL4MDVrf/IMG-20251122-204114.jpg" alt="Elegant Bar Area" class="w-full h-auto object-cover rounded-lg shadow-2xl transition duration-500 hover:opacity-90">
+                <img src="https://i.ibb.co/GvX6pt0w/IMG-20251122-204258.jpg" alt="Private Dining Room" class="w-full h-auto object-cover rounded-lg shadow-2xl transition duration-500 hover:opacity-90">
+            </div>
+
+            <div class="max-w-4xl mx-auto text-center">
+                <p class="text-lg leading-relaxed text-gray-300 mb-6">
+                    The Kapital Kitchen was founded on the principle that dining should be an immersive experience. From the moment you step into our elegantly designed space, every detailófrom the bespoke furnishings to the curated playlistóis designed to transport you. We source rare and exclusive ingredients, treating them with respect and innovation to deliver a menu that is both familiar and surprising.
+                </p>
+                <p class="text-lg leading-relaxed text-gray-300">
+                    Our commitment extends beyond the plate; it is woven into the fabric of our service, ensuring every guest receives attentive, personalized, and discreet care. Join us for a meal that defines luxury.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Reservations / Contact Section -->
+    <section id="contact" class="py-24 bg-kapital-subtle border-t border-kapital-accent">
+        <div class="max-w-3xl mx-auto px-4 text-center">
+            <h2 class="font-serif text-5xl text-kapital-gold mb-4">Reserve Your Table</h2>
+            <p class="text-xl text-gray-300 mb-12">
+                Secure your exclusive dining experience with us.
+            </p>
+
+            <form class="space-y-6 bg-kapital-dark p-8 rounded-xl shadow-2xl border border-kapital-accent">
+                <input type="text" placeholder="Full Name" class="w-full p-4 bg-kapital-subtle border border-kapital-accent rounded-lg focus:outline-none focus:ring-2 focus:ring-kapital-gold text-white" required>
+                <input type="email" placeholder="Email Address" class="w-full p-4 bg-kapital-subtle border border-kapital-accent rounded-lg focus:outline-none focus:ring-2 focus:ring-kapital-gold text-white" required>
+                <input type="tel" placeholder="Phone Number" class="w-full p-4 bg-kapital-subtle border border-kapital-accent rounded-lg focus:outline-none focus:ring-2 focus:ring-kapital-gold text-white">
+               
+                <div class="grid grid-cols-2 gap-4">
+                    <input type="date" class="w-full p-4 bg-kapital-subtle border border-kapital-accent rounded-lg focus:outline-none focus:ring-2 focus:ring-kapital-gold text-white" required>
+                    <input type="time" class="w-full p-4 bg-kapital-subtle border border-kapital-accent rounded-lg focus:outline-none focus:ring-2 focus:ring-kapital-gold text-white" required>
+                </div>
+               
+                <input type="number" placeholder="Number of Guests (1-10)" min="1" max="10" class="w-full p-4 bg-kapital-subtle border border-kapital-accent rounded-lg focus:outline-none focus:ring-2 focus:ring-kapital-gold text-white" required>
+               
+                <button type="submit" class="w-full px-8 py-4 bg-kapital-gold text-kapital-dark font-bold rounded-full text-lg btn-luxury shadow-2xl">
+                    Confirm Reservation
+                </button>
+            </form>
+
+            <div class="mt-12 text-gray-400">
+  <h3 class="text-2xl font-serif text-kapital-gold mb-3">Contact Details</h3>
+
+
+    Next Huatatma Smarak, Sangli - Miraj Rd, Nishant Colony,<br>
+   Sangli, Sangli Miraj Kupwad, Maharashtra 416416
+  </p>
+
+  <p class="mt-3">Phone: 086230 23666</p>
+
+  <p class="mt-4">Open: 12:00 PM – 11:00 PM</p>
+</div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-kapital-dark border-t border-kapital-accent py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center text-gray-500 text-sm">
+            &copy; 2025 The Kapital Kitchen. All Rights Reserved. | Designed with elegance by MAROONS.CO
+        </div>
+    </footer>
+
+
+    <!-- JavaScript for Image Slider Logic -->
+    <script>
+const sliderImages = document.querySelectorAll('#slider-images > div');
+const prevButton = document.getElementById('prev-slide');
+const nextButton = document.getElementById('next-slide');
+let currentSlide = 0;
+const slideInterval = 5000; // 5 seconds
+let intervalId;
+
+// Show a specific slide
+function showSlide(index) {
+    currentSlide = (index + sliderImages.length) % sliderImages.length;
+
+    sliderImages.forEach((slide, i) => {
+        const video = slide.querySelector('video');
+
+        if (i === currentSlide) {
+            slide.classList.remove('opacity-0');
+            slide.classList.add('opacity-100');
+
+            // If this slide has a video, play it
+            if (video) {
+                video.currentTime = 0;
+                video.play();
+            }
+        } else {
+            slide.classList.remove('opacity-100');
+            slide.classList.add('opacity-0');
+
+            // Pause any video on non-active slides
+            if (video) {
+                video.pause();
+            }
+        }
+    });
+}
+
+// Auto-slide
+function startSlider() {
+    intervalId = setInterval(() => {
+        showSlide(currentSlide + 1);
+    }, slideInterval);
+}
+
+function resetSliderInterval() {
+    clearInterval(intervalId);
+    startSlider();
+}
+
+// Button events
+prevButton.addEventListener('click', () => {
+    showSlide(currentSlide - 1);
+    resetSliderInterval();
+});
+
+nextButton.addEventListener('click', () => {
+    showSlide(currentSlide + 1);
+    resetSliderInterval();
+});
+
+// Start
+showSlide(0);     // show first slide properly
+startSlider();    // start autoplay
+</script>
+
